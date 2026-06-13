@@ -1,0 +1,6 @@
+{
+  "name": "MedCreative Labs Landing Page",
+  "description": "A precise recreation of the MedCreative Labs landing page.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
