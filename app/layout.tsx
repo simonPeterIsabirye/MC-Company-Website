@@ -1,26 +1,25 @@
-import type {Metadata} from 'next';
-import {Inter, Fraunces} from 'next/font/google';
-import './globals.css'; 
+import type { Metadata } from "next";
+import { Playfair_Display } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-serif',
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair", // Optional: use as a CSS variable
 });
 
 export const metadata: Metadata = {
-  title: 'MedCreative Labs',
-  description: 'Building Africa’s Intelligent Digital Future',
+  title: "MindCreative Labs",
+  description: "Building Africa’s Intelligent Digital Future",
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en">
+      <body className={`${playfair.className} antialiased`}>{children}</body>
     </html>
   );
 }
